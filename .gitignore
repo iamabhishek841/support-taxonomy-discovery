@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Data & model caches (regenerated locally, not committed)
+data/
+!data/.gitkeep
+embeddings_cache/
+.cache/
+*.parquet
+*.npy
+*.npz
+
+# Hugging Face / sentence-transformers caches
+.hf_cache/
+hf_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Results are committed selectively (branch 4 needs precomputed artifacts),
+# so results/ itself is tracked -- only exclude large intermediate scratch.
+results/*.tmp
