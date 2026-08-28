@@ -60,3 +60,19 @@ def generate_embeddings(
         np.save(cache_path, embeddings)
 
     return embeddings
+
+
+if __name__ == "__main__":
+    import time
+
+    from src.data_loader import load_bitext_dataset
+
+    dataset = load_bitext_dataset()
+    texts = dataset.texts["text"].tolist()
+
+    start = time.time()
+    embeddings = generate_embeddings(texts, show_progress_bar=True)
+    elapsed = time.time() - start
+
+    print(f"Embedded {len(texts):,} utterances with '{DEFAULT_MODEL_NAME}' in {elapsed:.1f}s")
+    print(f"Embedding shape: {embeddings.shape} (dim={embeddings.shape[1]})")

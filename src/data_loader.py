@@ -87,3 +87,16 @@ def load_bitext_dataset(
     texts = clean[["id", "instruction"]].rename(columns={"instruction": "text"})
     labels = clean[["id", "category", "intent"]]
     return SupportDataset(texts=texts, labels=labels)
+
+
+if __name__ == "__main__":
+    import time
+
+    start = time.time()
+    dataset = load_bitext_dataset()
+    elapsed = time.time() - start
+
+    print(f"Loaded {len(dataset.texts):,} cleaned utterances in {elapsed:.1f}s")
+    print(f"Categories ({dataset.labels['category'].nunique()}): "
+          f"{sorted(dataset.labels['category'].unique().tolist())}")
+    print(f"Intents: {dataset.labels['intent'].nunique()} unique")

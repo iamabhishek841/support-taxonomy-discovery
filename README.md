@@ -63,6 +63,13 @@ streamlit run dashboard/app.py
 _Filled in as each pipeline stage is actually run -- see individual PRs for
 the real numbers from real runs on the real dataset._
 
+**Data & embeddings (branch `data-and-embeddings`):**
+- Raw dataset: 26,872 rows (`bitext/Bitext-customer-support-llm-chatbot-training-dataset`)
+- After cleaning (whitespace-normalize, drop empty, dedupe exact-duplicate utterances): **24,635 unique utterances**
+- Held-out labels: 11 `category` values, 27 `intent` values (never used until final validation)
+- Embedding model: `all-MiniLM-L6-v2`, 384 dimensions
+- Full-dataset embedding generation: ~45s of actual encoding time (13-14 it/s over 385 batches on CPU); first run also pays a one-time model download
+
 ## Limitations
 
 _Filled in progressively -- covers sentence-transformer model choice,
