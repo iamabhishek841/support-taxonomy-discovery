@@ -42,7 +42,7 @@ def test_run_kmeans_without_k_runs_selection():
 
 def test_run_hdbscan_finds_dense_clusters():
     embeddings = _blob_embeddings(n_clusters=3, n_per_cluster=30)
-    labels, n_clusters, n_noise = run_hdbscan(embeddings, min_cluster_size=10)
+    labels, n_clusters, n_noise = run_hdbscan(embeddings, min_cluster_size=10, min_samples=5)
 
     assert n_clusters >= 1
     assert n_noise >= 0

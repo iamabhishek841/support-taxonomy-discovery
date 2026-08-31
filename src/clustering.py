@@ -60,12 +60,22 @@ def run_kmeans(
 
 def run_hdbscan(
     embeddings: np.ndarray,
-    min_cluster_size: int = 30,
-    min_samples: int | None = None,
+    min_cluster_size: int = 100,
+    min_samples: int | None = 30,
 ) -> tuple[np.ndarray, int, int]:
     """Run HDBSCAN. Returns (labels, n_clusters_found, n_noise_points).
 
     Noise points are labeled -1 by HDBSCAN and excluded from n_clusters_found.
+
+    Defaults (min_cluster_size=100, min_samples=30) were chosen by a
+    parameter sweep in src/tune_hdbscan.py after the original defaults
+    (30/30, giving 65 clusters) showed a large ARI/NMI gap suggestive of
+    over-segmentation. This coarser setting gives the best silhouette and
+    NMI of the sweep with fewer, less fragmented clusters -- see the
+    README for the full comparison table and honest discussion of the
+    trade-offs (ARI and noise fraction are both *slightly worse* than the
+    original 30/30 setting; the sweep did not find a config that improves
+    every metric at once).
     """
     import hdbscan
 
