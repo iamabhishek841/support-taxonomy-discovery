@@ -9,6 +9,7 @@ torch>=2.2
 # Clustering & dimensionality reduction
 hdbscan>=0.8.33
 umap-learn>=0.5.5
+matplotlib>=3.8
 
 # LLM labeling via local Ollama
 ollama>=0.3.0

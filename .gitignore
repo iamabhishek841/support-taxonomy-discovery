@@ -7,6 +7,7 @@ __pycache__/
 
 # Virtual environments
 .venv/
+.venv-wsl/
 venv/
 env/
 
@@ -15,9 +16,6 @@ data/
 !data/.gitkeep
 embeddings_cache/
 .cache/
-*.parquet
-*.npy
-*.npz
 
 # Hugging Face / sentence-transformers caches
 .hf_cache/
@@ -31,6 +29,8 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Results are committed selectively (branch 4 needs precomputed artifacts),
-# so results/ itself is tracked -- only exclude large intermediate scratch.
+# results/ IS committed (branch 4's dashboard loads precomputed artifacts
+# without rerunning the pipeline) -- except the raw embeddings matrix,
+# which is large and trivially regenerable from the cached model + data.
 results/*.tmp
+results/embeddings.npy

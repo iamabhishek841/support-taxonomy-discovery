@@ -36,6 +36,14 @@ dashboard/       -> Streamlit app over precomputed results/
 - Python 3.11+ (this repo was developed against 3.14)
 - [Ollama](https://ollama.com) installed and running locally, with a small
   model pulled (e.g. `ollama pull llama3.2`)
+- **Windows users:** run the pipeline from **WSL** (or another Linux/macOS
+  environment), not a native Windows Python install. `numba`
+  (a dependency of `umap-learn`) ships compiled `.pyd` binaries that Windows
+  **Smart App Control**, when enabled, blocks as unrecognized/low-reputation
+  code -- this is a Windows OS security feature, not a bug in this project.
+  `src/visualize.py` falls back to scikit-learn's t-SNE if UMAP can't be
+  imported, so the pipeline still runs and clearly reports which method it
+  used, but native WSL is the tested, reliable path.
 
 ### Setup
 ```bash
@@ -70,8 +78,61 @@ the real numbers from real runs on the real dataset._
 - Embedding model: `all-MiniLM-L6-v2`, 384 dimensions
 - Full-dataset embedding generation: ~45s of actual encoding time (13-14 it/s over 385 batches on CPU); first run also pays a one-time model download
 
+**Clustering & validation (branch `clustering-and-validation`):**
+
+K-Means silhouette-based k-search was swept over k = 4..68 (step 4) on the
+full 24,635-utterance embedding set (silhouette scored on a 5,000-point
+sample for speed):
+
+| method  | clusters found | silhouette | ARI vs category (11) | NMI vs category | ARI vs intent (27) | NMI vs intent |
+|---------|----------------|------------|-----------------------|------------------|----------------------|-----------------|
+| K-Means | k=52 (chosen by silhouette peak) | 0.188 | 0.291 | 0.730 | 0.562 | 0.808 |
+| HDBSCAN | 65 clusters, 6,153 noise pts (25.0%) | 0.256 (on the 18,482 non-noise points) | 0.510 | 0.780 | 0.715 | 0.860 |
+
+**HDBSCAN is the chosen clustering** -- it beats K-Means on both internal
+(silhouette) and external (ARI/NMI vs. the held-out human labels) metrics,
+at the cost of leaving a quarter of the data unclustered as noise. The
+external validation numbers say something real and worth being honest
+about: NMI in the 0.78-0.86 range indicates the *discovered* clusters share
+substantial mutual information with the *human-defined* categories/intents
+-- i.e. the unsupervised pipeline is finding structure that meaningfully
+resembles what a human taxonomy already captured, without ever seeing those
+labels. ARI is lower (0.29-0.71) because ARI penalizes differences in
+cluster *count* and *granularity* much more harshly than NMI does, and
+HDBSCAN's 65 clusters vs. 11 human categories is a real granularity
+mismatch, not necessarily a failure -- see Limitations below.
+
+UMAP ran successfully on native WSL (Windows blocked it via Smart App
+Control -- see Prerequisites) in 27.9s. The generated plot
+(`results/umap_clusters.png`) shows many visually distinct, well-separated
+clusters plus a diffuse "noise" region, consistent with the HDBSCAN numbers
+above.
+
 ## Limitations
 
-_Filled in progressively -- covers sentence-transformer model choice,
-k-selection sensitivity, and what the external validation score does and
-doesn't tell you._
+- **k-selection is data-driven but not sharply peaked.** The silhouette
+  curve for K-Means is fairly flat across k=32..68 (0.174-0.188) -- there
+  isn't one obviously "correct" k in that range, just a mild maximum at
+  k=52. A different k in that band would be almost as statistically
+  defensible. This is a real property of the embedding space, not a bug.
+- **HDBSCAN's cluster count (65) is much finer-grained than the human
+  taxonomy (11 categories / 27 intents).** That's plausibly *interesting*
+  (the raw text may support finer distinctions than the hand-built
+  taxonomy draws) but it also mechanically drags ARI down relative to NMI,
+  since ARI is sensitive to partition-size mismatches. Don't read the ARI
+  numbers alone as "the clustering is wrong" -- read them alongside NMI and
+  the granularity mismatch.
+- **25% of points are HDBSCAN noise.** Those utterances didn't fall into any
+  dense region at the `min_cluster_size=30` setting used here; a looser
+  setting would trade fewer noise points for coarser/less pure clusters.
+- **`all-MiniLM-L6-v2` is a small, general-purpose sentence embedding
+  model**, not fine-tuned on support-ticket language. A domain-tuned or
+  larger embedding model would likely change both the clusters found and
+  the external validation scores, in either direction.
+- **What external validation does and doesn't tell you:** a high NMI means
+  the discovered partition shares information with the human labels -- it
+  does *not* mean the discovered categories are "correct" in any absolute
+  sense, since the human taxonomy is itself just one particular way of
+  carving up the same underlying issues. Treat it as a sanity check that
+  the pipeline is finding *real*, human-recognizable structure, not as a
+  score to be maximized.
