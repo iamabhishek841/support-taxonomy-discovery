@@ -1,0 +1,977 @@
+{
+  "0": {
+    "label": "Newsletter Unsubscribing Assistance",
+    "description": "Customer requests help with unsubscribing from company newsletter",
+    "size": 975,
+    "examples": [
+      "could you help me to unsubscribe to the company newsletter?",
+      "can you help me to unsubscribe to your corporate newsletter?",
+      "help me to unsubscribe to your company newsletter",
+      "I want to unsubscribe to your corporate newsletter, help me",
+      "I want help to unsubscribe to your company newsletter",
+      "can you help me to unsubscribe to the corporate newsletter?",
+      "i need help to unsubscribe to the corporate newsletter",
+      "i need assistance to unsubscribe to the company newsletter"
+    ]
+  },
+  "1": {
+    "label": "Lost Invoice Inquiry",
+    "description": "Customer seeks assistance locating a lost invoice.",
+    "size": 1738,
+    "examples": [
+      "i need help looking for my bill from {{Person Name}}",
+      "i have to find my invoice #12588 how todo it",
+      "I need help to find my damn invoice from {{Person Name}}",
+      "i want assistance to find my invoice #85632",
+      "I want help to look for my invoice #85632",
+      "I need help to find my invoice #12588",
+      "how do i get my invoice #85632",
+      "get invoice #85632"
+    ]
+  },
+  "2": {
+    "label": "Cancellation Charges Support",
+    "description": "Customer inquiries about seeing cancellation charges",
+    "size": 177,
+    "examples": [
+      "I need help to see the cancellation charges",
+      "i need help to see the cancellation charges",
+      "I want help to see the cancellation charges",
+      "I have to see the cancellation charges, help me",
+      "i want assistance seeing the cancellation charge",
+      "I want assistance seeing the cancellation charge",
+      "i need help seeing the cancellation charges",
+      "i need assistance seeing the cancellation  charge"
+    ]
+  },
+  "3": {
+    "label": "Withdrawal Charge Inquiry",
+    "description": "Customer requests information on withdrawal fees",
+    "size": 189,
+    "examples": [
+      "help me to check the withdrawal charges",
+      "I want to see the withdrawal charge, I need help",
+      "I need help  checking the withdrawal charges",
+      "I do not know how to see the withdrawal charges",
+      "I need to check the withdrawal charge",
+      "i need assistance checking the withdrawal charges",
+      "I need assistance checking the withdrawal charges",
+      "need to check the withdrawal charge"
+    ]
+  },
+  "4": {
+    "label": "Restitution Status Inquiry",
+    "description": "Customers are seeking help with checking the status of their restitution or refund.",
+    "size": 92,
+    "examples": [
+      "want help to check the restitution status",
+      "how can I check the status of the restitution?",
+      "where could I check the current status of my restitution?",
+      "I need assistance checking the status of the restitution",
+      "where do i check the restitution status",
+      "where to check the restitution status?",
+      "how to see the status of my restitution",
+      "I want help seeing the restitution status"
+    ]
+  },
+  "5": {
+    "label": "Early Termination Fees",
+    "description": "Customer inquiries about fees associated with terminating a service contract.",
+    "size": 326,
+    "examples": [
+      "help me check the early termination fees",
+      "i want help to see the early termination charge",
+      "help me checking the early termination fees",
+      "I need assistance to see the early termination fees",
+      "check the early termination fee",
+      "can you help me to check the early termination charge ?",
+      "I want help to check the early termination charges",
+      "I try to check the early termination fees"
+    ]
+  },
+  "6": {
+    "label": "Early Exit Penalty Assistance",
+    "description": "Customers seeking help with understanding and accessing early exit penalty information in a product or system.",
+    "size": 52,
+    "examples": [
+      "I have to see the early exit penalty, I need help",
+      "i want help to check the early exit penalties",
+      "I do not know how to see the early exit penalty",
+      "I need assistance checkng the early exit penalties",
+      "I  want help checking the early exit penalties",
+      "I want to see the early exit penalty",
+      "i want help seeing the early exit penalties",
+      "I am trying to see the early exit penalties"
+    ]
+  },
+  "7": {
+    "label": "Early Exit Fee Inquiry",
+    "description": "Customers seeking information about exit fees.",
+    "size": 109,
+    "examples": [
+      "I need help checking the early exit fee",
+      "want help checking the early exit fee",
+      "help to check the early exit fee",
+      "need to check the early exit fees",
+      "I need assistance to see the early exit fee",
+      "can you help me checking the early exit fee?",
+      "want assistance to check the early exit fee",
+      "how do I see the early exit fee?"
+    ]
+  },
+  "8": {
+    "label": "Recovering User Account PIN",
+    "description": "Customer support inquiries about recovering forgotten PIN codes for user accounts.",
+    "size": 870,
+    "examples": [
+      "I want help to recover the PIN of my user profile",
+      "I forgot my user account PIN code, help me recover it",
+      "I want help restoring my user account PIN",
+      "I want assistance to recover my user profile PIN",
+      "I do not know how to recover the PIN code of my user account",
+      "I need help to reset the PIN of my user profile",
+      "i dont know how to restore the pin of myuser account",
+      "how do i recover the pin code of my user account"
+    ]
+  },
+  "9": {
+    "label": "agent assistance requests",
+    "description": "Customers seeking help communicating with live agents.",
+    "size": 304,
+    "examples": [
+      "i want help talking with an agent",
+      "need assistance to talk with an agent",
+      "i need assistance talking with an agent",
+      "help me talk to a agent",
+      "I need assistance talking to a live agent",
+      "help me talk with an agent",
+      "can ya help me to talk to an agent",
+      "I want help talking with a live agent"
+    ]
+  },
+  "10": {
+    "label": "Feedback Submission Assistance",
+    "description": "Customers seeking help with submitting feedback for products or services.",
+    "size": 714,
+    "examples": [
+      "i need help to submit my feedback for a service",
+      "i want help submitting my feedback about a service",
+      "I want assistance sending feedback for a product",
+      "want assistance to send feedback for a product",
+      "I want to send some feedback for a product",
+      "assistance to send some feedback about your products",
+      "want assistance to send my feedback about a product",
+      "I want assistance to leave some feedback for a product"
+    ]
+  },
+  "11": {
+    "label": "Delivery Country Inquiry",
+    "description": "Customer queries about placing orders in a specific country.",
+    "size": 44,
+    "examples": [
+      "could I place an order from {{Delivery Country}}?",
+      "could I place an order from {{Delivery Country}} ?",
+      "can I place an order from {{Delivery Country}}?",
+      "can i place an order from {{Delivery Country}}",
+      "is it possible to place a order from {{Delivery Country}}?",
+      "is it possible to place an order from {{Delivery Country}}?",
+      "is it possible to place an order from {{Delivery Country}}",
+      "could I order from {{Delivery Country}}?"
+    ]
+  },
+  "12": {
+    "label": "Payment Notification Issues",
+    "description": "Customer seeking assistance with notification of payment problems",
+    "size": 922,
+    "examples": [
+      "need help to notify of problems with payment",
+      "I want help to notify of issues with payment",
+      "I need assistance to inform of a payment issue",
+      "how could I report problems with payment?",
+      "I need assistance to inform of a problem with payments",
+      "I need help to report issues with payment",
+      "I don't know how I can report problems with payment",
+      "I want assistance to inform of a problem with payment"
+    ]
+  },
+  "13": {
+    "label": "Payment Method Inquiry",
+    "description": "Customer seeking information on accepted payment options.",
+    "size": 921,
+    "examples": [
+      "I need assistance to check your available payment methods",
+      "help me check your available payment methods",
+      "I want to see what payment options are accepted, help me",
+      "i need help to see ur available payment methods",
+      "need help to see ur available payment methods",
+      "help me to see the payment options",
+      "I have to check what payment methods are accepted, help me",
+      "I want assistance seeing what payment methods are accepted"
+    ]
+  },
+  "14": {
+    "label": "Article Shipping Inquiry",
+    "description": "Customers asking about tracking or delivery status of an article",
+    "size": 88,
+    "examples": [
+      "help me to check when will my article arrive",
+      "where do I see how soon can I expect my article?",
+      "I want help checking when will my article arrive",
+      "I need assistance to check when will my article arrive",
+      "want help to check when will my article arrive",
+      "I need help to check how soon can I expect my article",
+      "help me to check how soon can I expect the article",
+      "help seeing when will my article arrive"
+    ]
+  },
+  "15": {
+    "label": "Purchase Assistance",
+    "description": "Customers seeking guidance on buying multiple products",
+    "size": 370,
+    "examples": [
+      "assistance to buy several of your product",
+      "assistance to purchase a few of your product",
+      "I need assistance purchasing several products",
+      "how to purchase a few of your item?",
+      "I need assistance to buy several products",
+      "how to purchase a few of your product?",
+      "assistance buying several of your product",
+      "i want help purchasing several products"
+    ]
+  },
+  "16": {
+    "label": "Operator Contact Inquiry",
+    "description": "Customers seeking assistance with contacting customer support staff.",
+    "size": 100,
+    "examples": [
+      "I need to talk to a operator",
+      "I want help to talk to an operator",
+      "I need assistance to talk with an operator",
+      "i do not know how i can talk to an operator",
+      "help me to talk to an operator",
+      "I need assistance to talk to an operator",
+      "I don't know what I need to do to talk with an operator",
+      "I need to speak to an operator"
+    ]
+  },
+  "17": {
+    "label": "Tracking and Shipment",
+    "description": "Customer inquiries about shipment status and timelines",
+    "size": 768,
+    "examples": [
+      "i want help to see when will my item arrive",
+      "I need help checking how soon can I expect my shipment",
+      "want help checking how soon can i expect my shipment",
+      "need assistance checking how soon can I expect the shipment",
+      "I need to see how soon can I expect my shipment",
+      "I am trying to see when will my item arrive",
+      "where do i see how soon can i expect my shipment",
+      "assistance to see how soon can I expect my shipment"
+    ]
+  },
+  "18": {
+    "label": "Reimbursement Timing Inquiry",
+    "description": "Customers seeking information on the duration of reimbursement processes.",
+    "size": 43,
+    "examples": [
+      "i want help to check how long reimbursements take",
+      "I want help to check how long reimbursements take",
+      "I need to see how long reimbursements take",
+      "help me to check how long reimbursements usually take",
+      "I need to check how long reimbursements take, help me",
+      "help me to see how long reimbursements take",
+      "help me checking how long reimbursements take",
+      "I need help seeing how long reimbursements take"
+    ]
+  },
+  "19": {
+    "label": "Registration Notification Queries",
+    "description": "Customers seeking assistance with notifying others of registration issues or problems.",
+    "size": 235,
+    "examples": [
+      "I have  to notify of problems with a registration",
+      "how do i inform of a problem with registrations",
+      "how do i inform of problems with registrations",
+      "help me notify of problems with registrations",
+      "need to inform of a registration issue",
+      "i want help to inform of a registration issue",
+      "help me to inform of a registration issue",
+      "i have to notify of problems with registrations"
+    ]
+  },
+  "20": {
+    "label": "Signup Notification Issues",
+    "description": "Customers seeking help with signup notifications",
+    "size": 508,
+    "examples": [
+      "I want assistance to notify of problems with signup",
+      "I want help to notify of problems with a sign-up",
+      "I need assistance to notify of problems with a sign-up",
+      "I want assistance to report a problem with signup",
+      "I want assistance to notify of problems with a signup",
+      "need help to notify of problems with signup",
+      "how can I inform of a problem with a sign-up?",
+      "i need help notifying of problems with a signup"
+    ]
+  },
+  "21": {
+    "label": "Speaking Assistance",
+    "description": "Customers seeking help with phone or in-person conversations.",
+    "size": 192,
+    "examples": [
+      "i need assistance talking to a person",
+      "want help to speak to someone",
+      "want help to speak to somebody",
+      "i want assistance talking with somebody",
+      "I want assistance talking with an person",
+      "i want help speaking to someone",
+      "I want help to speak to somebody",
+      "help to speak with somebody"
+    ]
+  },
+  "22": {
+    "label": "Shipping Method Inquiry",
+    "description": "Customer seeks information on shipping options",
+    "size": 568,
+    "examples": [
+      "how do I see what shipping methods you offer?",
+      "I do not know how I can see what shipment methods you offer",
+      "help me to check what shipping methods you offer",
+      "I want help to check what shipping methods you offer",
+      "I want help to see the delivery options",
+      "I have to check what delivery options are there, help me",
+      "i want assistance to see what shipment methods i can choose",
+      "I need assistance seeing what shipment methods are available"
+    ]
+  },
+  "23": {
+    "label": "Delivery Address Support",
+    "description": "Customer issues related to updating delivery address",
+    "size": 1743,
+    "examples": [
+      "I need assistance trying to modify my delivery address",
+      "I have a trouble changing the delivery address",
+      "I want assistance trying to change my delivery address",
+      "i want help trying to modify my delivery address",
+      "I want help trying to modify my delivery address",
+      "i need assistance changing the delivery address",
+      "I need assistance trying to change the delivery address",
+      "I want help to change the delivery address"
+    ]
+  },
+  "24": {
+    "label": "Rebate Request Assistance",
+    "description": "Customers seeking guidance on requesting rebates or inquiring about rebate status.",
+    "size": 288,
+    "examples": [
+      "i do not know how i can request a rebate of my money",
+      "i have to request a rebate of my money",
+      "help me to request a rebate of my money",
+      "I don't know how I can request a rebate",
+      "I'm trying to request rebates of my money",
+      "i do not know how to request a rebate of money",
+      "I have to check the rebate status, I need assistance",
+      "help me obtaining a rebate of money"
+    ]
+  },
+  "25": {
+    "label": "Refund Assistance",
+    "description": "Customer seeking refund assistance for a purchase",
+    "size": 170,
+    "examples": [
+      "I paid {{Currency Symbol}}{{Refund Amount}} for this item, help me get a refund",
+      "I paid {{Currency Symbol}}{{Refund Amount}} for a purchase, assistance obtaining a refund",
+      "I paid {{Currency Symbol}}{{Refund Amount}} for this product, assistance to receive a refund",
+      "I paid {{Currency Symbol}}{{Refund Amount}} for this purchase, I have to get a damn refund",
+      "i paid {{Currency Symbol}}{{Refund Amount}} for this purchase want help receiving a refund",
+      "I paid {{Currency Symbol}}{{Refund Amount}} for this article, I need help getting a refund",
+      "i have paid {{Currency Symbol}}{{Refund Amount}} for this item help me to receive a refund",
+      "i have paid {{Currency Symbol}}{{Refund Amount}} for this item i need help to get a refund"
+    ]
+  },
+  "26": {
+    "label": "Consumer Complaint Assistance",
+    "description": "Requests for help with filing a consumer complaint against a company.",
+    "size": 519,
+    "examples": [
+      "I want to lodge a consumer complaint against your company",
+      "help me file a consumer complaint against ur company",
+      "help filing a consumer complaint against ur business",
+      "need help to make a customer claim against ur company",
+      "can you help me make a customer claim against your company?",
+      "how to file a consumer claim against your company?",
+      "need help making a consumer complaint against ur company",
+      "I have to file a consumer complaint against your company"
+    ]
+  },
+  "27": {
+    "label": "Customer Reclamation Support",
+    "description": "Customers seeking help with filing a reclamation against the company.",
+    "size": 180,
+    "examples": [
+      "want help to lodge a reclamation against your company",
+      "I want to lodge a consumer reclamation against your company",
+      "help me to file a consumer reclamation against your company",
+      "want help making a reclamation against ur company",
+      "i have to make a customer reclamation against ur company",
+      "help to lodge a customer reclamation against your company",
+      "want help to lodge a customer reclamation",
+      "where to lodge a consumer reclamation against ur company"
+    ]
+  },
+  "28": {
+    "label": "Customer Support Contact",
+    "description": "Customers seeking help with contacting support",
+    "size": 335,
+    "examples": [
+      "I need assistance to talk to customer support",
+      "I need assistance to talk to customer service",
+      "I want help to talk to customer support",
+      "I want help to speak to customer support",
+      "I need to speak to customer support, can I get some help?",
+      "i need assistance talking with customer service",
+      "help me to talk to customer support",
+      "I need assistance talking to customer service"
+    ]
+  },
+  "29": {
+    "label": "Hours of Operation",
+    "description": "Customer seeking support hours for service",
+    "size": 423,
+    "examples": [
+      "help me see what hours I can call customer support",
+      "help me seeing what hours I can call customer support",
+      "I want help to see what hours I can call customer support",
+      "need to see what hours i can reach customer support",
+      "i want help seeing what hours i can call customer support",
+      "I want help to check what hours I can reach customer support",
+      "help to check what hours I can call customer support",
+      "help me checking what hours I can call customer support"
+    ]
+  },
+  "30": {
+    "label": "User Profile Modification",
+    "description": "Customer inquiries about updating user information.",
+    "size": 83,
+    "examples": [
+      "I want to modify the info on my user, I need assistance",
+      "need help to modify my user information",
+      "how can I modify my user information?",
+      "I want help to modify my user details",
+      "I want to modify the information on my user, help me",
+      "need to modify the user info help me",
+      "i want help to change the info on my user",
+      "I have to modify the info included on my user, help me"
+    ]
+  },
+  "31": {
+    "label": "Customer Refund Inquiry",
+    "description": "Users seeking information on company's refund policy.",
+    "size": 64,
+    "examples": [
+      "I need help seeing your money back guarantee",
+      "help me seeing your money back guarantee",
+      "assistance to check ur money back guarantee",
+      "I need to see your money back guarantee, can you help me?",
+      "help seeing ur money back guarantee",
+      "I do not know how to see your money back guarantee",
+      "I don't know how I can see your money back guarantee",
+      "want help to check your damn money back guarantee"
+    ]
+  },
+  "32": {
+    "label": "Refund Processing Inquiry",
+    "description": "Customers seeking information on refund processing time.",
+    "size": 45,
+    "examples": [
+      "I need help to see how long refunds take",
+      "I need assistance seeing how long refunds take",
+      "i need assistance to check how long refunds take",
+      "I need help seeing how long refunds usually take",
+      "help me seeing how long refunds take",
+      "I'd like to see how long refunds  take help me",
+      "want help seeing how long refunds take",
+      "need to see how long refunds take can i get somehelp"
+    ]
+  },
+  "33": {
+    "label": "Shopping Assistance Request",
+    "description": "Customer seeks help with purchasing multiple articles",
+    "size": 135,
+    "examples": [
+      "I want help buying several articles",
+      "I need assistance to buy several articles",
+      "help me purchase several articles",
+      "help to purchase some articles",
+      "help to buy some articles",
+      "I want help to purchase some articles",
+      "can you help me to purchase several articles ?",
+      "I do not know how I can buy several articles"
+    ]
+  },
+  "34": {
+    "label": "Premium Account Support",
+    "description": "Customers seeking help with premium account changes",
+    "size": 177,
+    "examples": [
+      "change to the premium account",
+      "change to premium account",
+      "I need assistance changing to the premium account",
+      "I want help changing to the premium account",
+      "i need assistance to change to the premium account",
+      "watn help to change to the premium account",
+      "I want to change to the premium account",
+      "help changing to the premium account"
+    ]
+  },
+  "35": {
+    "label": "Refund Request Assistance",
+    "description": "Customers seeking help with refund requests",
+    "size": 52,
+    "examples": [
+      "assistance to obtain a restitution of my money",
+      "want help receiving a restitution of my money",
+      "I  need help asking for a restitution of my money",
+      "help me to ask for a restitution of my money",
+      "I need assistance requesting a restitution of money",
+      "need help requesting restitutions of my money",
+      "help me to request a restitution of money",
+      "i want assistance asking for a restitution of my money"
+    ]
+  },
+  "36": {
+    "label": "refund status inquiry",
+    "description": "Customer requests current status of refund.",
+    "size": 43,
+    "examples": [
+      "I need to see the current status of my refund",
+      "I want to see my refund current status, help me",
+      "I need help to check the current status of my refund",
+      "I want help to see the status of my refund",
+      "help me to see the refund status",
+      "I do not know how I can see the current status of the refund",
+      "how do I see the current status of the refund?",
+      "I'm trying to see my refund current status"
+    ]
+  },
+  "37": {
+    "label": "Refund Policy Inquiry",
+    "description": "Customers seeking help with accessing refund policies of a website or service.",
+    "size": 49,
+    "examples": [
+      "I need help to see your refund policy",
+      "I want help to see your refund policy",
+      "I need to see your refund policy",
+      "I need help seeing your refund policy",
+      "I need assistance to see your refund policy",
+      "I need to see your refund policy, can you helpme?",
+      "can you help me seeing your refund policy?",
+      "help me check your refund policy"
+    ]
+  },
+  "38": {
+    "label": "Account Upgrade Assistance",
+    "description": "Customer inquiries about upgrading to a premium account, typically the gold account.",
+    "size": 132,
+    "examples": [
+      "change to gold account",
+      "change to the gold account",
+      "how to change to the gold account?",
+      "help me to change to the gold account",
+      "i need help to change to the gold account",
+      "I need to change to the gold account",
+      "modify gold account",
+      "changing to gold account"
+    ]
+  },
+  "39": {
+    "label": "Compensation Payment Support",
+    "description": "Customers seeking financial compensation assistance.",
+    "size": 71,
+    "examples": [
+      "help me obtaining a compensation of money",
+      "I need help to receive a compensation of money",
+      "want help to obtain a compensation of money",
+      "help me obtain a compensation of money",
+      "I need help to obtain compensations of money",
+      "I want help getting a compensation of my money",
+      "want help to request a compensation of my money",
+      "I do not know how I could request compensations of money"
+    ]
+  },
+  "40": {
+    "label": "Compensation Inquiry",
+    "description": "Customers seeking information on compensation status or current status of compensation.",
+    "size": 70,
+    "examples": [
+      "i need help to see my compensation status",
+      "i want help to check the current status of my compensation",
+      "can ya help me to see my compensation current status",
+      "i need help seeing the status of my compensation",
+      "i want help to see the status of my compensation",
+      "how to see the current status of my compensation?",
+      "help to check the status of my compensation",
+      "what do I need to do to see the compensation current status?"
+    ]
+  },
+  "41": {
+    "label": "Refund Request Clarification",
+    "description": "Customers seeking assistance with refund process.",
+    "size": 53,
+    "examples": [
+      "help me check in what cases can I request my money back",
+      "see in which cases can I request my money back",
+      "help to see in which cases can i request my money back",
+      "want help to see in which cases can i request my money back",
+      "I have to see in which cases can I request my money back",
+      "I want to see in which cases can I request my money back",
+      "help to see in what cases can i request my money back",
+      "help me to see in which cases can i ask for my money back"
+    ]
+  },
+  "42": {
+    "label": "Refund Inquiry Support",
+    "description": "Customer requests information on refund eligibility",
+    "size": 426,
+    "examples": [
+      "I want help to see in which cases can I ask for refunds",
+      "i need help to see in which cases can i ask for refunds",
+      "I need help to see in which cases can I request refunds",
+      "i want help to check in what cases can i request refunds",
+      "need assistance to see in what cases can i ask for refunds",
+      "help to see in which cases can I ask for refunds",
+      "want help to check in what cases can i request refunds",
+      "assistance to see in which cases can i ask for refunds"
+    ]
+  },
+  "43": {
+    "label": "Freemium Account Assistance",
+    "description": "Users seeking help with upgrading to a freemium account",
+    "size": 158,
+    "examples": [
+      "change to the freemium account",
+      "assistance to change to the freemium account",
+      "change to freemium account",
+      "want assistance to change to the freemium account",
+      "I want help to change to the freemium account",
+      "help to use the freemium account",
+      "I want assistance to change to the freemium account",
+      "i need help using the freemium account"
+    ]
+  },
+  "44": {
+    "label": "platinum account modification",
+    "description": "Customers seeking to upgrade to platinum account features or assistance with account changes.",
+    "size": 164,
+    "examples": [
+      "change to the platinum account",
+      "change to platinum account",
+      "modify platinum account",
+      "help me change to the platinum account",
+      "edit platinum account",
+      "modifying platinum account",
+      "changing to platinum account",
+      "I need help changing to the platinum account"
+    ]
+  },
+  "45": {
+    "label": "Reimbursement Request Guidance",
+    "description": "Customer requests assistance with determining eligibility for reimbursement.",
+    "size": 259,
+    "examples": [
+      "help me see in what cases can i request a reimbursement",
+      "help me see in what cases can I request a reimbursement",
+      "help me to see in which cases can I request a reimbursement",
+      "help me to see in what cases can i request a reimbursement",
+      "assistance to see in which cases can I ask to be reimbursed",
+      "want help to see in what cases can I request reimbursements",
+      "I need help seeing in which cases can I ask to be reimbursed",
+      "want help to see in what cases can i ask for reimbursements"
+    ]
+  },
+  "46": {
+    "label": "Reimbursement Policy Inquiry",
+    "description": "Customers seeking information or assistance with reimbursement policies",
+    "size": 59,
+    "examples": [
+      "help me to check your reimbursement policy",
+      "I need assistance to check your reimbursement policy",
+      "I want to check your reimbursement policy, help me",
+      "I need help to see your reimbursement policy",
+      "I want to check your reimbursement policy",
+      "I need assistance checking your reimbursement policy",
+      "i want help to check ur reimbursement policy",
+      "I need to check your reimbursement policy, help me"
+    ]
+  },
+  "47": {
+    "label": "Reimbursement Status Inquiry",
+    "description": "Customers seeking current reimbursement status",
+    "size": 34,
+    "examples": [
+      "help me check the status of my reimbursement",
+      "how do I see the status of the reimbursement?",
+      "I want help to check the current status of the reimbursement",
+      "I have to see the current status of my reimbursement",
+      "how do I see the current status of the reimbursement?",
+      "I need to see the reimbursement status, how can I do it?",
+      "I need to check the current status of the reimbursement",
+      "I want to see my reimbursement current status, help me"
+    ]
+  },
+  "48": {
+    "label": "Pro Account Upgrade Query",
+    "description": "Customer requests information on or assistance with upgrading to a Pro account.",
+    "size": 140,
+    "examples": [
+      "change to the pro account",
+      "change to pro account",
+      "what do i need to do to change to the pro account",
+      "help changing to the pro account",
+      "what do I need to do to change to the pro account?",
+      "I don't know how to change to the pro account",
+      "i need assistance to change to the pro account",
+      "I don't know how I can change to the pro account"
+    ]
+  },
+  "49": {
+    "label": "Account Standardization Requests",
+    "description": "Customers seeking help changing to standard account type.",
+    "size": 252,
+    "examples": [
+      "help me change to the standard account",
+      "help to change to the standard account",
+      "I want help changing to the standard account",
+      "change to the standard account",
+      "I want help to change to the standard account",
+      "how to change to the standard account?",
+      "change to standard account",
+      "I need assistance changing to the standard account"
+    ]
+  },
+  "50": {
+    "label": "Account Category Help Request",
+    "description": "Customers seeking assistance with account switching or usage.",
+    "size": 485,
+    "examples": [
+      "help me change to the {{Account Category}} account",
+      "help changing to the {{Account Category}} account",
+      "want help to use the {{Account Category}} account",
+      "help to use the {{Account Category}} account",
+      "I don't know how to change to the {{Account Category}} account",
+      "help me to change to the {{Account Category}} account",
+      "change to the {{Account Category}} account",
+      "how to change to the {{Account Category}} account?"
+    ]
+  },
+  "51": {
+    "label": "Order Cancellation Support",
+    "description": "Customer requests assistance with deleting items from an order",
+    "size": 90,
+    "examples": [
+      "help me to delete an item from order {{Order Number}}",
+      "help deleting some items from order {{Order Number}}",
+      "help deleting a damn item from order {{Order Number}}",
+      "want assistance to remove some items from order {{Order Number}}",
+      "want help to delete some items from order {{Order Number}}",
+      "want help deleting something from order {{Order Number}}",
+      "help with deleting an item from order {{Order Number}}",
+      "want assistance deleting some items from order {{Order Number}}"
+    ]
+  },
+  "52": {
+    "label": "Account Profile Assistance",
+    "description": "Customer requests help with using a specific profile type.",
+    "size": 36,
+    "examples": [
+      "help me to use the {{Account Type}} profile",
+      "help me use the {{Account Type}} profile",
+      "i want help to use the {{Account Type}} profile",
+      "I want assistance to use the {{Account Type}} profile",
+      "help to use the {{Account Type}} profile",
+      "help me using the {{Account Type}} profile",
+      "can you help me to use the {{Account Type}} profile?",
+      "i want help using the {{Account Type}} profile"
+    ]
+  },
+  "53": {
+    "label": "Order Tracking Assistance",
+    "description": "Customer requests help with tracking order ETA.",
+    "size": 134,
+    "examples": [
+      "i want assistance to see the eta of order {{Order Number}}",
+      "help me to see the ETA of order {{Order Number}}",
+      "I want help to see the ETA of order {{Order Number}}",
+      "I want assistance to see the ETA of the order {{Order Number}}",
+      "i want assistance to see the ETA of the order {{Order Number}}",
+      "help me check the ETA of order {{Order Number}}",
+      "help me check the eta of the order {{Order Number}}",
+      "i have to see the eta of order {{Order Number}}"
+    ]
+  },
+  "54": {
+    "label": "Account Type Change Help",
+    "description": "Customers seeking assistance with changing their account type.",
+    "size": 233,
+    "examples": [
+      "I don't know how to change to the {{Account Type}} account",
+      "I don't know how I could change to the {{Account Type}} account",
+      "how to change to the {{Account Type}} account?",
+      "how to change to the {{Account Type}} account",
+      "how could i change to the {{Account Type}} account",
+      "need help to change to the {{Account Type}} account",
+      "what do i need to do to change to the {{Account Type}} account",
+      "help changing to the {{Account Type}} account"
+    ]
+  },
+  "55": {
+    "label": "Account Cancellation Inquiry",
+    "description": "Customer seeks assistance with cancelling an existing account",
+    "size": 45,
+    "examples": [
+      "I want help canceling the {{Account Type}} account",
+      "help me canceling my {{Account Type}} account",
+      "I don't know what I need to do to cancel the {{Account Type}} account",
+      "help me cancelling the {{Account Type}} account",
+      "help me cancel the {{Account Type}} account",
+      "need assistance to cancel the {{Account Type}} account",
+      "I do not know what to do to cancel the {{Account Type}} account",
+      "I don't know what I have to do to cancel the {{Account Type}} account"
+    ]
+  },
+  "56": {
+    "label": "Account Removal Inquiry",
+    "description": "Customers ask for help removing a specific type of account.",
+    "size": 80,
+    "examples": [
+      "I do not know what I have to do to remove a {{Account Type}} account",
+      "I do not know what to do to remove a {{Account Type}} account",
+      "i do not know what i need to do to remove a {{Account Type}} account",
+      "i do not know what i need to do to remove the {{Account Type}} account",
+      "I do not know what I need to do to remove the {{Account Type}} account",
+      "what do i have to do to remove my {{Account Type}} account",
+      "i do not know what i have to do to remove the {{Account Type}} account",
+      "I need assistance to remove my {{Account Type}} account"
+    ]
+  },
+  "57": {
+    "label": "Order Tracking Assistance",
+    "description": "Customers requesting help with order location.",
+    "size": 34,
+    "examples": [
+      "I want help to locate order {{Order Number}}",
+      "I need help to locate order {{Order Number}}",
+      "I have to locate order {{Order Number}}, could I get some help?",
+      "I am trying to locate order {{Order Number}}",
+      "i have got to locate order {{Order Number}}",
+      "I have got to locate order {{Order Number}}",
+      "I want to locate order {{Order Number}}, can I get some help?",
+      "I don't know how to locate order {{Order Number}}"
+    ]
+  },
+  "58": {
+    "label": "Order Cancellation Inquiry",
+    "description": "Customer requests help canceling an existing order.",
+    "size": 112,
+    "examples": [
+      "I need help canceling order {{Order Number}}",
+      "i need help canceling order {{Order Number}}",
+      "I need assistance with canceling order {{Order Number}}",
+      "i need assistance with canceling order {{Order Number}}",
+      "i need assistance canceling order {{Order Number}}",
+      "I need assistance canceling order {{Order Number}}",
+      "help me to cancel order  {{Order Number}}",
+      "want help to cancel order {{Order Number}}"
+    ]
+  },
+  "59": {
+    "label": "Order Cancellation Requests",
+    "description": "Customers seeking assistance with cancelling an existing order.",
+    "size": 148,
+    "examples": [
+      "help me to cancel purchase {{Order Number}}",
+      "help me cancel purchase {{Order Number}}",
+      "help  me canceling purchase {{Order Number}}",
+      "help me canceling purchase {{Order Number}}",
+      "help to cancel purchase {{Order Number}}",
+      "I need help cancelling purchase {{Order Number}}",
+      "i need help cancelling purchase {{Order Number}}",
+      "need help to cancel purchase {{Order Number}}"
+    ]
+  },
+  "60": {
+    "label": "ETA tracking issues",
+    "description": "Customers seeking ETA information for orders.",
+    "size": 121,
+    "examples": [
+      "help me see the ETA  of purchase {{Order Number}}",
+      "help me see the eta of purchase {{Order Number}}",
+      "help me see the ETA of purchase {{Order Number}}",
+      "I need help to see the ETA of purchase {{Order Number}}",
+      "help me to see the ETA of the purchase {{Order Number}}",
+      "help me check the eta of purchase {{Order Number}}",
+      "help me to check the eta of the purchase {{Order Number}}",
+      "I'm trying to see the eta of purchase {{Order Number}}"
+    ]
+  },
+  "61": {
+    "label": "Order Status Inquiry",
+    "description": "Customers request purchase order status",
+    "size": 158,
+    "examples": [
+      "need to see purchase {{Order Number}} status",
+      "help me see purchase {{Order Number}} status",
+      "how do i see purchase  {{Order Number}} status",
+      "seeing status of purchase {{Order Number}}",
+      "see status of purchase {{Order Number}}",
+      "how can i see the status of purchase {{Order Number}}",
+      "help me checking the status of purchase {{Order Number}}",
+      "help me seeing purchase {{Order Number}} status"
+    ]
+  },
+  "62": {
+    "label": "Order Status Inquiry",
+    "description": "Customers asking for status of a specific order.",
+    "size": 181,
+    "examples": [
+      "how to see the status of order {{Order Number}}",
+      "help to see order {{Order Number}} status",
+      "how to see order {{Order Number}} status?",
+      "I'm trying to see the current status of order {{Order Number}}",
+      "how to see the status of order {{Order Number}}?",
+      "how to see order {{Order Number}} status",
+      "I am trying to see the status of order {{Order Number}}",
+      "help me to check the current status of order {{Order Number}}"
+    ]
+  },
+  "63": {
+    "label": "Order Change Support",
+    "description": "Customer requests assistance with modifying existing orders.",
+    "size": 111,
+    "examples": [
+      "help me change purchase {{Order Number}}",
+      "need to change something of purchase {{Order Number}}",
+      "i have to modify purchase {{Order Number}} help me",
+      "I want help to change purchase {{Order Number}}",
+      "how can i change purchase {{Order Number}}",
+      "need assistance to change purchase {{Order Number}}",
+      "I want help to modify purchase {{Order Number}}",
+      "change purchase {{Order Number}}"
+    ]
+  },
+  "64": {
+    "label": "Editing Order Request",
+    "description": "Customers seeking assistance with modifying their orders.",
+    "size": 85,
+    "examples": [
+      "how to edit order {{Order Number}}",
+      "how to edit order {{Order Number}}?",
+      "help to edit order {{Order Number}}",
+      "help me edit order {{Order Number}}",
+      "how do I edit order {{Order Number}}?",
+      "I  have to edit order {{Order Number}}",
+      "need help to edit order {{Order Number}}",
+      "I need help to modify order {{Order Number}}"
+    ]
+  }
+}

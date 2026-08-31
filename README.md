@@ -108,6 +108,40 @@ Control -- see Prerequisites) in 27.9s. The generated plot
 clusters plus a diffuse "noise" region, consistent with the HDBSCAN numbers
 above.
 
+**LLM cluster labeling (branch `llm-cluster-labeling`):**
+
+All 65 HDBSCAN clusters were labeled by a local `llama3.2` model via Ollama,
+using the utterances closest to each cluster's centroid as context. Real run:
+23.2s total (0.3-0.5s/cluster once the model was warm on GPU). A few actual
+generated labels, largest clusters first:
+
+| cluster | size | LLM-generated label | description |
+|---|---|---|---|
+| 23 | 1,743 | Delivery Address Support | Customer issues related to updating delivery address |
+| 1  | 1,738 | Lost Invoice Inquiry | Customer seeks assistance locating a lost invoice |
+| 0  | 975   | Newsletter Unsubscribing Assistance | Customer requests help with unsubscribing from company newsletter |
+| 12 | 922   | Payment Notification Issues | Customer seeking assistance with notification of payment problems |
+| 13 | 921   | Payment Method Inquiry | Customer seeking information on accepted payment options |
+| 8  | 870   | Recovering User Account PIN | Customer support inquiries about recovering forgotten PIN codes |
+| 17 | 768   | Tracking and Shipment | Customer inquiries about shipment status and timelines |
+
+Full labels for all 65 clusters are in `results/cluster_labels.json`. Several
+labels land on genuinely finer-grained distinctions than the original 11
+categories (e.g. splitting "early termination fees" from "early exit
+penalty" from "withdrawal charges" as separate clusters) -- plausible
+evidence that the discovered taxonomy captures real structure the flat
+human categories don't.
+
+**Note on the local environment for this branch:** the machine's default
+Ollama install (native WSL, not the Windows one) turned out to have an
+incomplete/corrupted binary (missing the `llama-server` inference engine --
+confirmed via a `500` error and directory listing), likely from an
+interrupted install. It was repaired by re-downloading the official Ollama
+release tarball to a user-owned directory (no `sudo` required) and running
+it directly. This is an environment quirk specific to this machine, not a
+code issue -- a normal `curl -fsSL https://ollama.com/install.sh | sh`
+install works fine in general.
+
 ## Limitations
 
 - **k-selection is data-driven but not sharply peaked.** The silhouette
