@@ -56,15 +56,23 @@ pip install -r requirements.txt
 ```bash
 python -m src.data_loader      # downloads + caches the dataset (first run only)
 python -m src.embeddings       # generates + caches embeddings
-python -m src.clustering       # runs K-Means and HDBSCAN, picks a clustering
-python -m src.validation       # reports silhouette + external validation
-python -m src.label_clusters   # labels each cluster via local Ollama
+python -m src.clustering       # runs K-Means and HDBSCAN, saves results/*.npy + summary json
+python -m src.validation       # adds silhouette + external validation to the summary json
+python -m src.visualize        # UMAP projection + results/umap_clusters.png
+python -m src.label_clusters   # labels each cluster via local Ollama, results/cluster_labels.json
 ```
+
+Each stage writes to `results/`, which the dashboard reads from directly --
+see below.
 
 ### Run the dashboard
 ```bash
 streamlit run dashboard/app.py
 ```
+Opens at `http://localhost:8501`. The dashboard **only reads precomputed
+files from `results/`** (all committed to this repo) -- it never re-runs
+embeddings, clustering, or Ollama itself, so it works immediately after
+cloning, with no GPU, Ollama, or the full pipeline required.
 
 ## Results
 
@@ -142,6 +150,31 @@ it directly. This is an environment quirk specific to this machine, not a
 code issue -- a normal `curl -fsSL https://ollama.com/install.sh | sh`
 install works fine in general.
 
+## Dashboard
+
+![Dashboard screenshot](docs/dashboard_screenshot.png)
+
+A Streamlit dashboard (`dashboard/app.py`) presents the results: KPI cards
+(conversations processed, clusters discovered, silhouette score, external
+validation NMI), an interactive Plotly UMAP scatter plot colored by
+cluster, and a cluster explorer -- pick any of the 65 discovered clusters
+to see its LLM-generated label, size, and real example conversations, with
+the selected cluster highlighted on the scatter plot.
+
+It reads **only** precomputed files from `results/` (all committed to this
+repo) and never re-runs the pipeline or calls Ollama, so it deploys and
+loads instantly with no GPU or local model dependency.
+
+### Deploying to Streamlit Community Cloud
+
+1. Push this repo to GitHub (already done if you're reading this on GitHub).
+2. Go to [share.streamlit.io](https://share.streamlit.io), sign in, and
+   click "New app".
+3. Select this repo, branch `main`, and set the main file path to
+   `dashboard/app.py`.
+4. Deploy. No secrets or environment variables are needed -- the dashboard
+   only reads the committed `results/` artifacts.
+
 ## Limitations
 
 - **k-selection is data-driven but not sharply peaked.** The silhouette
@@ -163,6 +196,10 @@ install works fine in general.
   model**, not fine-tuned on support-ticket language. A domain-tuned or
   larger embedding model would likely change both the clusters found and
   the external validation scores, in either direction.
+- **The dashboard's UMAP scatter deliberately has no per-cluster legend.**
+  With 65 clusters a legend would be unusable clutter; identity instead
+  comes from hover tooltips and the cluster-explorer selection (which
+  highlights the chosen cluster on the plot), not from color alone.
 - **What external validation does and doesn't tell you:** a high NMI means
   the discovered partition shares information with the human labels -- it
   does *not* mean the discovered categories are "correct" in any absolute
