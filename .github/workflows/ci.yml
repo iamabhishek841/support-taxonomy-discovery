@@ -17,6 +17,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Ruff
-        run: ruff check src tests
+        run: ruff check src tests dashboard
       - name: Pytest
         run: pytest -q
