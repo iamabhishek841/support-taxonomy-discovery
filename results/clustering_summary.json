@@ -40,20 +40,20 @@
     }
   },
   "hdbscan": {
-    "n_clusters": 65,
-    "n_noise": 6153,
-    "silhouette_full": 0.25644662976264954,
+    "n_clusters": 44,
+    "n_noise": 6525,
+    "silhouette_full": 0.2626775801181793,
     "external_validation": {
       "vs_category": {
-        "ari": 0.5101194276251965,
-        "nmi": 0.7798412749049408,
-        "n_evaluated": 18482,
+        "ari": 0.496019489295163,
+        "nmi": 0.7970644480815992,
+        "n_evaluated": 18110,
         "n_total": 24635
       },
       "vs_intent": {
-        "ari": 0.7147586678401291,
-        "nmi": 0.8598205590469779,
-        "n_evaluated": 18482,
+        "ari": 0.7518868803327569,
+        "nmi": 0.86954495117412,
+        "n_evaluated": 18110,
         "n_total": 24635
       }
     }
